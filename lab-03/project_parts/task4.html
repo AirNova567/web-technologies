@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Завдання 4: Анкета користувача</title>
+</head>
+<body>
+  <header align="center">
+    <h1>Анкета користувача</h1>
+  </header>
+
+  <main align="center">
+    <form action="task4.html" method="get" enctype="multipart/form-data">
+      <table border="0" cellpadding="5" cellspacing="0" width="700" align="center">
+        <tr>
+          <td>
+
+            <fieldset>
+              <legend><b>1. Облікові дані та безпека</b></legend>
+              <br>
+
+              <label for="user-login">Логін користувача (input type="text"):</label><br>
+              <input type="text" id="user-login" name="user_login" placeholder="Введіть ваш логін" required tabindex="1"><br><br>
+
+              <label for="user-password">Пароль (6 символів: 1 велика, 1 мала літера, 1 цифра):</label><br>
+              <input type="password" id="user-password" name="user_password" placeholder="Пароль" 
+                     title="Пароль повинен містити рівно 6 символів, принаймні одну велику літеру, одну малу літеру та одну цифру" 
+                     required tabindex="2"><br><br>
+
+              <label for="user-email">Електронна пошта (autocomplete="off"):</label><br>
+              <input type="email" id="user-email" name="user_email" placeholder="example@domain.com" 
+                     title="Введіть дійсну адресу електронної пошти (наприклад, user@gmail.com)" 
+                     autocomplete="off" required tabindex="3"><br><br>
+
+              <label for="user-tel">Мобільний номер телефону:</label><br>
+              <input type="tel" id="user-tel" name="user_tel" placeholder="+380XXXXXXXXX" 
+                     title="Формат: +380XXXXXXXXX (12 цифр із префіксом +380)" 
+                     required tabindex="4"><br><br>
+
+              <label for="user-birthdate">Дата народження:</label><br>
+              <input type="date" id="user-birthdate" name="user_birthdate" required tabindex="5"><br>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+              <legend><b>2. Опитування та вподобання</b></legend>
+              <br>
+
+              <p><b>Оберіть ваш рівень володіння комп'ютером (Блок radio №1):</b></p>
+              <label><input type="radio" name="it_level" value="beginner" tabindex="6"> Початковий</label><br>
+              <label><input type="radio" name="it_level" value="intermediate" tabindex="7"> Середній</label><br>
+              <label><input type="radio" name="it_level" value="advanced" tabindex="8"> Просунутий</label><br>
+
+              <p><b>Оберіть зручний формат занять (Блок radio №2, 2-й пункт активний за замовчуванням):</b></p>
+              <label><input type="radio" name="study_format" value="offline" tabindex="9"> Очний</label><br>
+              <label><input type="radio" name="study_format" value="online" checked tabindex="10"> Дистанційний (онлайн)</label><br>
+              <label><input type="radio" name="study_format" value="mixed" tabindex="11"> Змішаний</label><br>
+
+              <p><b>Ваші сфери інтересів у Web (Блок checkbox із чотирма варіантами):</b></p>
+              <label><input type="checkbox" name="interests" value="html_css" tabindex="12"> Верстка HTML/CSS</label><br>
+              <label><input type="checkbox" name="interests" value="javascript" tabindex="13"> Фронтенд JavaScript</label><br>
+              <label><input type="checkbox" name="interests" value="backend" tabindex="14"> Бекенд розробка</label><br>
+              <label><input type="checkbox" name="interests" value="ui_ux" tabindex="15"> UI/UX Дизайн</label><br>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+              <legend><b>3. Класифікаційні списки</b></legend>
+              <br>
+
+              <label for="course-select">Курс навчання (3-й за замовчуванням):</label><br>
+              <select id="course-select" name="student_course" tabindex="16">
+                <option value="course_1">1 курс (бакалаврат)</option>
+                <option value="course_2">2 курс (бакалаврат)</option>
+                <option value="course_3" selected>3 курс (бакалаврат)</option>
+                <option value="course_4">4 курс (бакалаврат)</option>
+                <option value="course_master">Магістратура</option>
+              </select><br><br>
+
+              <label for="skills-multiple">Мови програмування (множинний вибір, 6 варіантів):</label><br>
+              <select id="skills-multiple" name="programming_languages" multiple size="4" tabindex="17">
+                <option value="c_plus_plus">C++</option>
+                <option value="python">Python</option>
+                <option value="javascript">JavaScript</option>
+                <option value="php">PHP</option>
+                <option value="c_sharp">C#</option>
+                <option value="java">Java</option>
+              </select><br><br>
+
+              <label for="city-groups">Регіон проживання (4 групи по 3 пункти):</label><br>
+              <select id="city-groups" name="region_city" tabindex="18">
+                <optgroup label="Західний регіон">
+                  <option value="chernivtsi">Чернівці</option>
+                  <option value="lviv">Львів</option>
+                  <option value="ivano_frankivsk">Івано-Франківськ</option>
+                </optgroup>
+                <optgroup label="Центральний регіон">
+                  <option value="kyiv">Київ</option>
+                  <option value="vinnytsia">Вінниця</option>
+                  <option value="poltava">Полтава</option>
+                </optgroup>
+                <optgroup label="Південний регіон">
+                  <option value="odesa">Одеса</option>
+                  <option value="mykolaiv">Миколаїв</option>
+                  <option value="kherson">Херсон</option>
+                </optgroup>
+                <optgroup label="Східний регіон">
+                  <option value="kharkiv">Харків</option>
+                  <option value="dnipro">Дніпро</option>
+                  <option value="zaporizhzhia">Запоріжжя</option>
+                </optgroup>
+              </select><br><br>
+
+              <label for="browser-choice">Основний веб-браузер (із підказками datalist):</label><br>
+              <input type="text" list="browsers-list" id="browser-choice" name="preferred_browser" placeholder="Почніть вводити назву браузера..." tabindex="19">
+              <datalist id="browsers-list">
+                <option value="Google Chrome">
+                <option value="Mozilla Firefox">
+                <option value="Safari">
+                <option value="Microsoft Edge">
+                <option value="Opera">
+              </datalist><br>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+              <legend><b>4. Завантаження файлів та побажання</b></legend>
+              <br>
+
+              <label for="audio-files">Завантаження аудіофайлів (лише аудіо, кілька файлів):</label><br>
+              <input type="file" id="audio-files" name="user_audio[]" accept="audio/*" multiple tabindex="20"><br><br>
+
+              <label for="about-user">Додаткові коментарі та відгук про курс:</label><br>
+              <textarea id="about-user" name="user_feedback" rows="4" cols="50" placeholder="Введіть додаткову інформацію про себе..." tabindex="21"></textarea><br>
+            </fieldset>
+
+            <br>
+
+            <div align="center">
+              <input type="submit" value="Надіслати анкету" tabindex="22">
+              <input type="reset" value="Очистити форму" tabindex="23">
+            </div>
+
+          </td>
+        </tr>
+      </table>
+    </form>
+
+    <br>
+
+    <p align="center">
+      <font size="3">
+        <a href="../index.html">Повернутись на головну</a>
+      </font>
+    </p>
+  </main>
+
+  <footer></footer>
+</body>
+</html>
