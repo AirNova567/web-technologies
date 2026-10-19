@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.box {
+    display: inline-block;
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border: 5px solid #1565c0;
+    background-color: #bbdefb;
+    vertical-align: top;
+}
+
+.content-box {
+    box-sizing: content-box;
+}
+
+.border-box {
+    box-sizing: border-box;
+}
+
+.overflow {
+    max-height: 80px;
+    margin-bottom: 20px;
+    border: 2px solid #2e7d32;
+}
+
+.of-visible {
+    overflow: visible;
+}
+
+.of-hidden {
+    overflow: hidden;
+}
+
+.menu .off {
+    display: none;
+}
+
+.of-scroll {
+    overflow: scroll;
+}
+
+.of-auto {
+    overflow: auto;
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #1565c0;
+    color: white;
+    text-decoration: none;
+}

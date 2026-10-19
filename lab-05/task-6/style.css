@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 20px 0;
+    background-color: #1b2a41;
+    background-image: url("img/landscape.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    box-sizing: border-box;
+    max-width: 900px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+section div,
+section span {
+    background-color: #bbdefb;
+    border: 1px solid #1565c0;
+}
+
+section div {
+    display: inline;
+    width: 200px;
+    height: 100px;
+}
+
+section span {
+    display: block;
+    width: 150px;
+    margin-bottom: 5px;
+}
+
+section .repeat {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 180px;
+    height: 200px;
+    margin: 0 10px 10px 0;
+    background-color: #ffffff;
+    background-image: url("img/icon.png");
+    vertical-align: top;
+}
+
+.repeat-x {
+    background-repeat: repeat-x;
+}
+
+.repeat-y {
+    background-repeat: repeat-y;
+}
+
+.space {
+    background-repeat: space;
+}
+
+.round {
+    background-repeat: round;
+}
+
+section .size {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 300px;
+    height: 200px;
+    margin: 0 10px 10px 0;
+    border: 2px solid #1565c0;
+    background-color: #ffffff;
+    background-image: url("img/landscape.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    vertical-align: top;
+}
+
+.contain {
+    background-size: contain;
+}
+
+.cover {
+    background-size: cover;
+}
+
+section .attach {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 48%;
+    max-height: 150px;
+    overflow: auto;
+    background-color: #ffffff;
+    background-image: url("img/icon.png");
+    vertical-align: top;
+}
+
+.scroll {
+    background-attachment: scroll;
+}
+
+.local {
+    background-attachment: local;
+}
