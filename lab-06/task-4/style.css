@@ -1,0 +1,181 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.icon {
+    display: block;
+    margin: 0 auto;
+}
+
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: #555;
+}
+
+.top-nav:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.top-item {
+    position: relative;
+    float: left;
+    width: 120px;
+}
+
+.top-item-right {
+    float: right;
+}
+
+.top-link {
+    display: block;
+    padding: 12px 0;
+    color: white;
+}
+
+.top-item:hover > .top-link {
+    background-color: #777;
+}
+
+.top-item.active > .top-link {
+    background-color: #4caf50;
+}
+
+.top-sub {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 180px;
+    background-color: #444;
+}
+
+.top-item-right .top-sub {
+    left: auto;
+    right: 0;
+}
+
+.top-sub li {
+    position: relative;
+}
+
+.top-sub a {
+    display: block;
+    padding: 10px 15px;
+    color: white;
+}
+
+.top-sub a:hover {
+    background-color: #4caf50;
+}
+
+.top-item:hover > .top-sub,
+.top-sub li:hover > .top-sub {
+    display: block;
+}
+
+.top-sub-3 {
+    top: 0;
+    left: 100%;
+}
+
+.page {
+    padding: 80px 20px 20px;
+}
+
+.sticky-title {
+    position: sticky;
+    top: 48px;
+    margin: 0;
+    padding: 10px;
+    background-color: #e8f5e9;
+}
+
+.side-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 220px;
+    height: 100vh;
+    background-color: #0067b8;
+}
+
+.side-item {
+    position: relative;
+    border-bottom: 1px solid #5aa5e0;
+}
+
+.side-link {
+    display: block;
+    padding: 14px 15px;
+    color: white;
+    font-size: 18px;
+}
+
+.side-link .icon {
+    display: inline-block;
+    margin: 0 15px 0 0;
+    vertical-align: middle;
+}
+
+.side-text {
+    vertical-align: middle;
+}
+
+.side-item:hover > .side-link {
+    background-color: #0a7fdb;
+}
+
+.side-item.active > .side-link {
+    background-color: #004e8f;
+}
+
+.side-sub {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 180px;
+    background-color: #004e8f;
+}
+
+.side-sub li {
+    position: relative;
+}
+
+.side-sub a {
+    display: block;
+    padding: 12px 15px;
+    color: white;
+}
+
+.side-sub a:hover {
+    background-color: #0a7fdb;
+}
+
+.side-item:hover > .side-sub,
+.side-sub li:hover > .side-sub {
+    display: block;
+}
+
+.side-page {
+    margin-left: 240px;
+    padding: 20px;
+}
