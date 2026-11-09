@@ -1,0 +1,82 @@
+:root {
+    --gap: 8px;
+    --row: 50px;
+    --color-block: #fdd942;
+    --color-text: #fff;
+}
+
+body {
+    padding: 8px;
+}
+
+.tree {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(12, var(--row));
+    gap: var(--gap);
+    grid-auto-flow: dense;
+    counter-reset: block;
+}
+
+.block {
+    counter-increment: block;
+    padding-top: 6px;
+    background: var(--color-block);
+    color: var(--color-text);
+    font-family: "Times New Roman", serif;
+    font-size: 22px;
+    text-align: center;
+}
+
+.block::before {
+    content: counter(block);
+}
+
+.block:nth-child(n+1):nth-child(-n+1) {
+    grid-column: 1;
+    grid-row: span 12;
+}
+
+.block:nth-child(n+2):nth-child(-n+3) {
+    grid-column: 2;
+    grid-row: span 6;
+}
+
+.block:nth-child(n+4):nth-child(-n+6) {
+    grid-column: 3;
+    grid-row: span 4;
+}
+
+.block:nth-child(n+7):nth-child(-n+10) {
+    grid-column: 4;
+    grid-row: span 3;
+}
+
+.block:nth-child(n+11):nth-child(-n+16) {
+    grid-column: 5;
+    grid-row: span 2;
+}
+
+.block:nth-child(n+17):nth-child(-n+28) {
+    grid-column: 6;
+    grid-row: span 1;
+}
+
+@media (max-width: 768px) {
+    .tree {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: none;
+        grid-auto-rows: 70px;
+    }
+
+    .block {
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .tree {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
